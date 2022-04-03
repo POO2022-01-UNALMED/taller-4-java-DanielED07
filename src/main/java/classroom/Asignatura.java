@@ -1,19 +1,19 @@
-package classroom;
+package classroom;	
 
 public class Asignatura {
 
     String nombre;
-    String n = nombre;
-    int codigoInterno;
-    int codigoExterno;
+    //String n = nombre; Se declara 2 veces el atributoo ?
+    long codigoInterno;// Se cambia int a long
+    int codigoExterno; 
     Tipo tipo;
 
     Asignatura() {
-        this("Sin nombre",Tipo.FUNDAMENTACION);
-        this(0);
+        this("Sin nombre",0,0,Tipo.FUNDAMENTACION);
+        //this(0);
     }
 
-    Asignatura(int codigoInterno,Tipo tipo) {
+    Asignatura(long codigoInterno,Tipo tipo) { 
         this("Sin nombre", codigoInterno, 0,tipo);
     }
 
@@ -25,7 +25,7 @@ public class Asignatura {
         this(nombre, 0, 0,tipo);
     }
 
-    Asignatura(String nombre, int codigoInterno, int codigoExterno,Tipo tipo) {
+    Asignatura(String nombre, long codigoInterno, int codigoExterno,Tipo tipo) {
         this.nombre = nombre;
         this.codigoInterno = codigoInterno;
         this.codigoExterno = codigoExterno;
@@ -39,7 +39,7 @@ public class Asignatura {
         this.tipo = tipo;
     }
 
-    void cambiarDatos(int codigoInterno) {
+    void cambiarDatos(long codigoInterno) {
         this.codigoInterno = codigoInterno;
     }
 

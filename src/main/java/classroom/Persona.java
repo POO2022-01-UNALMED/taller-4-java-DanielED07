@@ -2,13 +2,18 @@ package classroom;
 
 public class Persona {
 
-    final long cedula;
+    long cedula = 1; // se cambia final a static // No debe ser static
     String nombre;
     static int totalPersonas;
     
     static {
         totalPersonas = 0;
-        cedula = 3;
+        //cedula = 3; // Cedula no debe ser un atributo de clase
+    }
+    
+    // Agragamos un constructor sin argumentos
+    Persona(){
+    	this(0,"");
     }
 
     Persona(long cedula, String nombre) {
